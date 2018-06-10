@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>GitHub Info - Pesquise por repositórios do GitHub</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<!-- navbar -->
+	<nav class="navbar is-fixed-top is-bold is-black" role="navigation" aria-label="Main navigation">
+		<div class="navbar-brand">
+			<a href="#!" class="navbar-item">GitHub Info</a>
+			<a role="button" id="navBurguer" class="navbar-burger has-text-light" aria-label="menu" aria-expanded="false">
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+			</a>
+		</div>
+		<div class="navbar-menu" id="navMenu">
+			<div class="navbar-start">
+				<a href="#intro" class="navbar-item">Introdução</a>
+				<a href="#usage" class="navbar-item">Utilização</a>
+			</div>
+			<div class="navbar-end">
+				<span class="navbar-item">
+					<a href="#!" class="button is-info">
+						<span>Apoie já</span>
+					</a>
+				</span>
+			</div>
+		</div>
+	</nav>
+	<!-- navbar -->
+
+	<!-- content -->
+	<section class="hero is-medium is-dark is-bold">
+		<div class="hero-body" id="intro">
+			<div class="section">
+				<div class="container">
+					<div class="columns">
+						<div class="column has-text-centered">
+							<h1 class="title is-4">Informações rápidas</h1>
+							<p class="subtitle is-5">Tenha suas informações rapidamente e com a confiança de que será entregue.</p>
+						</div>
+					</div>
+					<div class="columns">
+						<div class="column has-text-centered">
+							<a href="#!" class="button is-dark is-outlined is-inverted">
+								<span class="icon">
+									<i class="fa fa-code"></i>
+								</span>
+								<span>Código fonte</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section">
+				<div class="container">
+					<div class="columns">
+						<div class="column has-text-centered">
+							<div class="message is-info">
+								<div class="message-header">
+									<p>Sobre</p>
+								</div>
+								<div class="message-body">
+									<div class="box">
+										<div class="media">
+											<div class="media-left">
+												<figure class="image is-64x64">
+													<img src="https://image.flaticon.com/icons/svg/25/25231.svg" alt="GitHub logo">
+												</figure>
+											</div>
+											<div class="media-content">
+												<div class="content">
+													<p>
+														<strong>GitHub</strong> <small>@github</small><br>
+														Uma plataforma para versionamento online.
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								<p>
+									GitHub é uma plataforma de hospedagem de código-fonte com controle de versão usando o Git. Ele permite que programadores, utilitários ou qualquer usuário cadastrado na plataforma contribuam em projetos privados e/ou Open Source de qualquer lugar do mundo. GitHub é amplamente utilizado por programadores para divulgação de seus trabalhos ou para que outros programadores contribuam com o projeto, além de promover fácil comunicação através de recursos que relatam problemas ou mesclam repositórios remotos (issues, pull request).
+								</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="hero is-info is-medium" id="usage">
+		<div class="hero-body">
+			<div class="container">
+				<div class="columns">
+					<div class="column has-text-centered">
+						<h1 class="title is-4">Pesquise por repositórios</h1>
+						<p class="subtitle is-5">Digite o usuário para pesquisar os repositórios públicos, privados e forks de um usuário. Obtenção de dados através da API do GitHub, disponível em <a class="has-text-dark" href="https://developer.github.com/v3/?">GitHub API</a></p>
+						<span class="icon has-text-black is-large animated hidden" id="bookIcon">
+							<i class="fas fa-2x fa-book"></i>
+						</span>
+						<span class="icon has-text-black is-large animated hidden" id="codeIcon">
+							<i class="fas fa-2x fa-code-branch"></i>
+						</span>
+					</div>
+					<div class="column has-text-centered">
+						<nav class="panel">
+						  <p class="panel-heading">
+						    Repositórios
+						  </p>
+						  <div class="panel-block">
+						    <p class="control has-icons-left">
+						      <input id="searchInput" class="input is-small" type="text" placeholder="Usuário">
+						      <span class="icon is-small is-left">
+						        <i class="fas fa-search" aria-hidden="true"></i>
+						      </span>
+						    </p>
+						  </div>
+						  <p class="panel-tabs">
+						    <a class="is-active">todos</a>
+						  </p>
+						  <div id="blocks"></div>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="hero is-info is-medium">
+		<div class="hero-body">
+			<div class="container">
+				<div class="columns">
+					<div class="column is-offset-1">
+						<figure class="image is-square">
+							<img class="animated hidden" id="githubIcon" src="https://octodex.github.com/images/jetpacktocat.png" alt="A image of GitHub site">
+						</figure>
+					</div>
+					<div class="column has-text-centered">
+						<h1 class="title is-4">Código aberto</h1>
+						<p class="subtitle is-5 has-text-justified">Esteja diante da maior reserva online de código aberto do mundo. Fique por dentro do mundo da programação agora.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="hero is-black">
+		<div class="hero-body">
+			<div class="container">
+				<div class="columns">
+					<div class="column has-text-centered">
+						<h1 class="subtitle">Disponível no GitHub, através de </h1>
+						<a href="https://www.github.com/renidantass/gitinfo" class="button is-link is-rounded is-outlined">Repositório do GitHub</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- content -->
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+	<script src="node_modules/waypoints/lib/noframework.waypoints.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
